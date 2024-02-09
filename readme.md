@@ -28,7 +28,7 @@ Ever wanted to view your employees? Your departments? Their roles? All in a simp
 ---
 
 ## Video
-![Watch the example video](https://i.stack.imgur.com/Vp2cE.png)(https://drive.google.com/file/d/1fTDrKkV8ID7MYiGQZgBFAiTZYGoiwsiQ/view) 
+[![Watch the example video](https://i.stack.imgur.com/Vp2cE.png)](https://drive.google.com/file/d/1fTDrKkV8ID7MYiGQZgBFAiTZYGoiwsiQ/view) 
 
 ---
 
