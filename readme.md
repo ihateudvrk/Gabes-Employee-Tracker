@@ -34,10 +34,10 @@ Ever wanted to view your employees? Your departments? Their roles? All in a simp
 
 ## Usage
 
-1.Clone repo onto your own machine. 
-2.Replace SQL login code with your own. 
-3.Source the schema and seeds sql within your mysql prompt by running mysql -u root -p within your command line.
-4.Run node server.js file within command line and go crazy!
+1. Clone repo onto your own machine. 
+2. Replace SQL login code with your own. 
+3. Source the schema and seeds sql within your mysql prompt by running mysql -u root -p within your command line.
+4. Run node server.js file within command line and go crazy!
 ---
 
 ## Questions
