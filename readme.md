@@ -9,8 +9,6 @@ Ever wanted to view your employees? Your departments? Their roles? All in a simp
 
 ## Table of Contents
 
-- [Technology Used](#technology-used)
-
 - [Links](#links)
 
 - [Vide0](#Video)
