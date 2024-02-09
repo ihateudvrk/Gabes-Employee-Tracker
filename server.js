@@ -59,7 +59,8 @@ function init (){
             case "update an employee role":
                 updateEmployee();
             break;
-
+            default:
+                quit();
       }
     });
 }
@@ -75,6 +76,7 @@ function viewAllDepartments(){
     db.query (sqlQuery,(err,results) => {
         if(err) console.log(err);
         console.table(results)
+        init();
     })
 };
 
@@ -84,6 +86,7 @@ function viewAllRoles(){
     db.query (sqlQuery,(err,results) => {
         if(err) console.log(err);
         console.table(results)
+        init();
     })
 };
 
@@ -93,15 +96,61 @@ function viewAllEmployees(){
     db.query (sqlQuery,(err,results) => {
         if(err) console.log(err);
         console.table(results)
+        init();
     })
 };
 
+//Adding Department
+function addDepartment() {
+    inquirer.prompt({
+        type: "input",
+        message: "What is the name of the department?",
+        name: "deptName"
+    })
+    .then(function (answer) {
+        db.query("INSERT INTO department (name) VALUES (?)", [answer.deptName], function (err, res) {
+            if (err) throw err;
+            console.table(res)
+            init();
+        })
+    })
+};
 
-function addDepartment(){};
+function addRole(){
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "What's the name of the role?",
+            name: "roleName"
+        },
+        {
+            type: "input",
+            message: "What is the salary for this role?",
+            name: "salaryTotal"
+        },
+        {
+            type: "input",
+            message: "What is the department id number?",
+            name: "deptID"
+        }])
+    .then(function(answer) {
+        db.query("INSERT INTO role (position, salary, department_id) VALUES (?, ?, ?)", [answer.roleName, answer.salaryTotal, answer.deptID], function(err, res) {
+        if(err) throw err;
+        console.table(res);
+        init();
+      });
+    });
+};
 
-function addRole(){};
+function addEmployee(){
+    
+};
 
-function addEmployee(){};
+
+function quit() {
+    connection.end();
+    process.exit();
+  }
 /*
 Charlie's suggestion:
     1. Create the main menu
